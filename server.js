@@ -31,7 +31,13 @@ hbs.registerHelper('screamIt',(text)=>{
     return text.toUpperCase();
 })
 
-app.get('/',(req,res) =>{
+app.get('/',(req,res)=>{
+    res.render("min.hbs",{
+        pageTitle:'ควยมิน'
+    })
+})
+
+app.get('/home',(req,res) =>{
     res.render('home.hbs',{
         pageTitle:'Home Page',
         welcomeMessage:'Welcome to my WebSite'
